@@ -11,8 +11,9 @@
         android:theme="@style/Theme.Stronger2gether">
 
         <activity
-            android:name=".ui.view.MainActivity"
-            android:exported="true">
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
