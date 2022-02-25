@@ -3,4 +3,10 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="description_splash_logo">Splash Screen Logo</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_person">Person</string>
+    <string name="home_tab_scientist">Scientist</string>
+    <string name="home_completed_donations">Completed Donations</string>
+    <string name="infoimage">infoImage</string>
+    <string name="home_completed_donations_show_all">Show All</string>
 </resources>
