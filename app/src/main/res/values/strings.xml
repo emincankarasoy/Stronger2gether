@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Stronger2gether</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
