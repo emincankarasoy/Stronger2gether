@@ -1,13 +1,11 @@
 package com.emincankarasoy.stronger2gether.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.emincankarasoy.stronger2gether.R
-import com.emincankarasoy.stronger2gether.module.checkExitRequest
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
+import com.emincankarasoy.stronger2gether.ui.view.ApplicationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,16 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Handler().postDelayed(Runnable{goToNextScreen()},5000L)
+        Handler().postDelayed({goToNextScreen()},5000L)
     }
 
     private fun goToNextScreen(){
-
+        startActivity(Intent(this,ApplicationActivity::class.java))
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+        finish()
     }
-
-    override fun onBackPressed() {
-        checkExitRequest()
-    }
-
-
 }
