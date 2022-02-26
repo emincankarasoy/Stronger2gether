@@ -13,8 +13,9 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
-        <item name="colorControlNormal">@color/colorOnDark</item>
-        <item name="colorControlActivated">@color/colorComponent</item>
+    <style name="Theme.TransparentStatusBar" parent="@style/Theme.Stronger2gether">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
     </style>
+
 </resources>

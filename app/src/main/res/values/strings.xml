@@ -27,4 +27,12 @@
     <string name="sample_campaign_value">$20.000 / $65.000</string>
     <string name="patient_name">Patient Name</string>
     <string name="success_stories">Success Stories</string>
+    <string name="send_donate">Send</string>
+    <string name="_10">$10</string>
+    <string name="_30">$30</string>
+    <string name="_60">$60</string>
+    <string name="_120">$120</string>
+    <string name="description">Description</string>
+    <string name="favorite">Favorite</string>
+    <string name="report">Report</string>
 </resources>

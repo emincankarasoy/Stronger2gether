@@ -1,6 +1,7 @@
 package com.emincankarasoy.stronger2gether.ui.view
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -27,8 +28,16 @@ class ApplicationActivity : AppCompatActivity() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.applicationNavHostFragment) as NavHostFragment
         NavigationUI.setupWithNavController(binding.applicationBottomNavView,navHostFragment.navController)
+
+        setOnClickListener()
     }
 
+
+    private fun setOnClickListener(){
+        binding.donateFab.setOnClickListener{
+            startActivity(Intent(this,CampaignDetailActivity::class.java))
+        }
+    }
 
 
     override fun onBackPressed() {

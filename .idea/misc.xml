@@ -8,10 +8,13 @@
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/color_volunteer.xml" value="0.2975" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ic_baseline_info.xml" value="0.2975" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ic_heart.xml" value="0.318" />
+        <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ic_round_arrow_back.xml" value="0.218" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ic_round_play_circle.xml" value="0.3495" />
+        <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ic_round_warning_24.xml" value="0.218" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/rating_volunteer.xml" value="0.2975" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/drawable/ratingbar_volunteer.xml" value="0.2975" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/activity_application.xml" value="0.33" />
+        <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/activity_campaign_detail.xml" value="0.33" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/application_toolbar.xml" value="0.25" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/dialog_exit.xml" value="0.3625" />
@@ -22,6 +25,7 @@
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/recycler_completed.xml" value="0.33" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/layout/recycler_volunteer.xml" value="0.7012987012987013" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/menu/menu_application_navigation.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/menu/menu_campaign_toolbar.xml" value="0.3625" />
         <entry key="..\:/Users/eminc/AndroidStudioProjects/Stronger2gether/app/src/main/res/menu/menu_home_toolbar.xml" value="0.67" />
       </map>
     </option>

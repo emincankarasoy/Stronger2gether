@@ -26,6 +26,8 @@
 
         <activity android:name=".ui.view.ApplicationActivity"/>
 
+        <activity android:name=".ui.view.CampaignDetailActivity"/>
+
     </application>
 
 </manifest>
