@@ -3,9 +3,15 @@ package com.emincankarasoy.stronger2gether.ui
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.emincankarasoy.stronger2gether.R
 import com.emincankarasoy.stronger2gether.ui.view.ApplicationActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Handler().postDelayed({goToNextScreen()},5000L)
+        lifecycleScope.launch(Dispatchers.Default) {
+            delay(5000L)
+            goToNextScreen()
+        }
     }
 
     private fun goToNextScreen(){

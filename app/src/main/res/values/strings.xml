@@ -6,7 +6,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_person">Person</string>
     <string name="home_tab_scientist">Scientist</string>
-    <string name="home_completed_donations">Completed Donations</string>
+    <string name="home_completed_campaigns">Completed Campaigns</string>
     <string name="infoimage">infoImage</string>
     <string name="home_completed_donations_show_all">Show All</string>
+    <string name="menu_home_search">Search</string>
+    <string name="menu_home_information">Information</string>
+    <string name="home_our_volunteer_ambassadors">Our Volunteer Ambassadors</string>
+    <string name="home_volunteer_name">Emilia Clark</string>
 </resources>
