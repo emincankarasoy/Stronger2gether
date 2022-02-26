@@ -37,9 +37,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:textColor="@color/colorComponentDark"
+                android:textColor="@color/colorOnDark"
                 android:text="Patient Name"
                 android:textStyle="bold"
+                android:shadowDy="1"
+                android:shadowColor="@color/colorComponentDark"
+                android:shadowRadius="2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/campaignDescription"/>
 
@@ -51,7 +54,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:singleLine="true"
-                android:textColor="@color/colorComponentDark"
+                android:textColor="@color/colorOnDark"
+                android:shadowDy="1"
+                android:shadowColor="@color/colorComponentDark"
+                android:shadowRadius="2"
                 app:layout_constraintBottom_toTopOf="@id/campaignProgressBar"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna bibendum arcu gravida fermentum ut tempor dui. In vestibulum sit amet neque sed vestibulum."/>
 
@@ -75,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_round_check_circle"
-                android:tint="@color/colorPrimary"
+                android:tint="@color/colorOnDark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="15dp"

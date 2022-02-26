@@ -7,9 +7,20 @@
         android:icon="@drawable/ic_round_home"
         android:title="@string/menu_home"/>
 
+    <item
+        android:id="@+id/campaignFragment"
+        android:icon="@drawable/ic_round_healing"
+        android:title="@string/menu_campaign"
+        android:enabled="false" />
+
+    <item android:id="@+id/notificationFragment"
+        android:icon="@drawable/ic_round_notification"
+        android:title="@string/menu_notification"
+        android:enabled="false"/>
 
     <item
         android:id="@+id/accountFragment"
         android:icon="@drawable/ic_round_person"
         android:title="@string/menu_person"/>
+
 </menu>

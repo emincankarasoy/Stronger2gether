@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.ApplicationActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/applicationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/colorOnDark" />
 
 
     <androidx.fragment.app.FragmentContainerView
@@ -13,22 +23,34 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/applicationBottomNavView"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/application_navigation"/>
+        app:layout_constraintBottom_toBottomOf="@id/applicationBottomNavView"
+        app:layout_constraintTop_toBottomOf="@id/applicationToolbar"
+        app:navGraph="@navigation/application_navigation" />
 
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/ic_heart"
+        android:text="@string/application_donate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        tools:ignore="ContentDescription"
+        app:layout_anchor="@id/applicationBottomNavView"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/applicationBottomNavView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/menu_application_navigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:animateLayoutChanges="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:labelVisibilityMode="auto"
-        android:animateLayoutChanges="false"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_application_navigation"
+        app:labelVisibilityMode="unlabeled"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

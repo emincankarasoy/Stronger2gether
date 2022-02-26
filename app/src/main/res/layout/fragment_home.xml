@@ -1,74 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorOnDark">
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="58dp">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/homeFragmentToolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary"
-        app:titleTextColor="@color/colorOnDark"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_completed_campaigns"
-        android:textColor="@color/colorComponentDark"
-        app:layout_constraintStart_toStartOf="parent"
-        android:paddingHorizontal="8dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@id/homeFragmentToolbar"/>
-
-    <TextView
-        android:id="@+id/homeCompletedShowAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_completed_donations_show_all"
-        android:textColor="@color/colorComponent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingHorizontal="8dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@id/homeFragmentToolbar"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/completedCampaignRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/homeCompletedShowAll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/homeVolunteerTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_our_volunteer_ambassadors"
-        android:textColor="@color/colorComponentDark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/completedCampaignRecycler"
-        android:layout_marginStart="10dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/volunteerRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeVolunteerTitle"/>
+        android:layout_height="match_parent"
+        android:background="@color/colorOnDark">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_completed_campaigns"
+            android:textColor="@color/colorComponentDark"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
+        <TextView
+            android:id="@+id/homeCompletedShowAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_completed_donations_show_all"
+            android:textColor="@color/colorComponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/completedCampaignRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/homeCompletedShowAll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/homeVolunteerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_our_volunteer_ambassadors"
+            android:textColor="@color/colorComponentDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/completedCampaignRecycler"
+            android:layout_marginStart="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/volunteerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeVolunteerTitle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
 
