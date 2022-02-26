@@ -11,4 +11,8 @@ class CampaignRepository {
         return campaignLocalDataSource.getCompletedCampaignList()
     }
 
+    fun getLastCampaign():ArrayList<Campaign>{
+        return campaignLocalDataSource.getCampaignList()
+    }
+
 }

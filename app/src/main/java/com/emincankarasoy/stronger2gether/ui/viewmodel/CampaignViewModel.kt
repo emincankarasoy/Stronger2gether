@@ -9,14 +9,20 @@ import com.emincankarasoy.stronger2gether.data.repository.CampaignRepository
 class CampaignViewModel:ViewModel() {
     private val campaignRepository = CampaignRepository()
 
-    private val _campaignList = MutableLiveData<ArrayList<Campaign>>()
+    private val _completedCampaignList = MutableLiveData<ArrayList<Campaign>>()
+    val completedCampaignList: LiveData<ArrayList<Campaign>>
+        get() = _completedCampaignList
 
-    val campaignList: LiveData<ArrayList<Campaign>>
+    private val _campaignList = MutableLiveData<ArrayList<Campaign>>()
+    val campaignList : LiveData<ArrayList<Campaign>>
         get() = _campaignList
 
     init {
         val arrayList = campaignRepository.getCompletedCampaign()
-        _campaignList.postValue(arrayList)
+        _completedCampaignList.postValue(arrayList)
+        val campaignList = campaignRepository.getLastCampaign()
+        _campaignList.postValue(campaignList)
+
     }
 
 }

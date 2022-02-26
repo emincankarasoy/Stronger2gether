@@ -3,6 +3,7 @@
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
@@ -46,7 +47,7 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/totalDonateBar"
+            android:id="@+id/informationBar"
             android:layout_width="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,6 +102,71 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <TextView
+            android:id="@+id/successStoriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/success_stories"
+            android:textColor="@color/colorComponentDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/informationBar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/successStoriesVideoContainer"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            app:layout_constraintTop_toBottomOf="@id/successStoriesText"
+            app:cardCornerRadius="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_success_story"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/color_darkness"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_round_play_circle"
+                    tools:ignore="ContentDescription"
+                    app:tint="@color/colorComponentDark"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
 
         <TextView
             android:id="@+id/homeVolunteerTitle"
@@ -109,9 +175,10 @@
             android:text="@string/home_our_volunteer_ambassadors"
             android:textColor="@color/colorComponentDark"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/totalDonateBar"
+            app:layout_constraintTop_toBottomOf="@id/successStoriesVideoContainer"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"/>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/volunteerRecyclerView"
@@ -121,7 +188,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/homeVolunteerTitle"/>
 
+
+        <TextView
+            android:id="@+id/homeLastCampaign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_last_companion"
+            android:textColor="@color/colorComponentDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/volunteerRecyclerView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeLastCampaignRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/homeLastCampaign"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.core.widget.NestedScrollView>
 

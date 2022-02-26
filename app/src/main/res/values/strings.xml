@@ -6,7 +6,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_person">Person</string>
     <string name="home_tab_scientist">Scientist</string>
-    <string name="home_completed_campaigns">Completed Campaigns</string>
+    <string name="home_completed_campaigns">Last Completed Campaigns</string>
     <string name="infoimage">infoImage</string>
     <string name="home_completed_donations_show_all">See All</string>
     <string name="menu_home_search">Search</string>
@@ -22,4 +22,9 @@
     <string name="total_donate_value">$9.023.451</string>
     <string name="registered_user">Registered User :</string>
     <string name="registered_user_value">11.357</string>
+    <string name="home_last_companion">Last Companion</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna bibendum arcu gravida fermentum ut tempor dui. In vestibulum sit amet neque sed vestibulum.</string>
+    <string name="sample_campaign_value">$20.000 / $65.000</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="success_stories">Success Stories</string>
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="250dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -24,36 +25,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/image_patient"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
+                android:scaleType="centerCrop"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/color_darkness"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/totalDonateText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:shadowDy="1"
-                android:shadowColor="@color/colorComponentDark"
-                android:shadowRadius="2"
-                android:text="@string/sample_campaign_value"
-                android:textColor="@color/colorOnDark"/>
+                android:src="@drawable/color_completed"/>
 
             <TextView
                 android:id="@+id/campaignName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
                 android:textColor="@color/colorOnDark"
-                android:text="@string/patient_name"
+                android:text="Patient Name"
                 android:textStyle="bold"
                 android:shadowDy="1"
                 android:shadowColor="@color/colorComponentDark"
@@ -74,7 +59,7 @@
                 android:shadowColor="@color/colorComponentDark"
                 android:shadowRadius="2"
                 app:layout_constraintBottom_toTopOf="@id/campaignProgressBar"
-                android:text="@string/lorem_ipsum"/>
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna bibendum arcu gravida fermentum ut tempor dui. In vestibulum sit amet neque sed vestibulum."/>
 
 
             <ProgressBar
@@ -90,6 +75,21 @@
                 android:progressTint="@color/colorPrimary"
                 android:max="100"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_check_circle"
+                android:tint="@color/colorOnDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"/>
+
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

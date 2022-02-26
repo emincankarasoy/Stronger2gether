@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.emincankarasoy.stronger2gether.R
 import com.emincankarasoy.stronger2gether.databinding.FragmentHomeBinding
+import com.emincankarasoy.stronger2gether.ui.adapter.CampaignsAdapter
 import com.emincankarasoy.stronger2gether.ui.adapter.CompletedCampaignsAdapter
 import com.emincankarasoy.stronger2gether.ui.adapter.VolunteersAdapter
 import com.emincankarasoy.stronger2gether.ui.viewmodel.CampaignViewModel
@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
         ViewModelProvider.NewInstanceFactory().create(CampaignViewModel::class.java)
     }
 
+    private lateinit var campaignsAdapter: CampaignsAdapter
     private lateinit var completedCampaignsAdapter : CompletedCampaignsAdapter
     private lateinit var volunteersAdapter: VolunteersAdapter
 
@@ -46,21 +47,33 @@ class HomeFragment : Fragment() {
         binding.completedCampaignRecycler.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
         binding.completedCampaignRecycler.adapter = completedCampaignsAdapter
 
+        campaignsAdapter = CampaignsAdapter(ArrayList())
+        binding.homeLastCampaignRecycler.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
+        binding.homeLastCampaignRecycler.adapter = campaignsAdapter
+
         volunteersAdapter = VolunteersAdapter(ArrayList())
         binding.volunteerRecyclerView.layoutManager = GridLayoutManager(activity,2,GridLayoutManager.VERTICAL,false)
         binding.volunteerRecyclerView.adapter = volunteersAdapter
 
         startObservingLiveDatas()
+        binding.completedCampaignRecycler.layoutManager?.apply {
+            scrollToPosition(2)
+        }
     }
 
     private fun startObservingLiveDatas(){
-        campaignViewModel.campaignList.observe(viewLifecycleOwner){
+        campaignViewModel.completedCampaignList.observe(viewLifecycleOwner){
             completedCampaignsAdapter.changeCampaignListValues(it)
+        }
+
+        campaignViewModel.campaignList.observe(viewLifecycleOwner){
+            campaignsAdapter.changeCampaignListValues(it)
         }
 
         volunteerViewModel.volunteerList.observe(viewLifecycleOwner){
             volunteersAdapter.changeVolunteerListValues(it)
         }
+
 
     }
 
