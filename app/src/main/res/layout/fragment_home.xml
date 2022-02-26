@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/home_completed_donations_show_all"
-            android:textColor="@color/colorComponent"
+            android:textColor="@color/colorSecondary"
             app:layout_constraintEnd_toEndOf="parent"
             android:paddingHorizontal="8dp"
             android:layout_marginTop="15dp"
@@ -62,7 +62,7 @@
                 android:paddingVertical="10dp"
                 android:paddingHorizontal="5dp"
                 android:orientation="horizontal"
-                android:background="@drawable/color_totaldonate">
+                android:background="@color/colorPrimary">
 
                 <TextView
                     android:layout_width="wrap_content"

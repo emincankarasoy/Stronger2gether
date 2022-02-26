@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.emincankarasoy.stronger2gether.data.model.Volunteer
 import com.emincankarasoy.stronger2gether.databinding.RecyclerVolunteerBinding
 
@@ -37,6 +38,7 @@ class VolunteersAdapter(private var itemList : ArrayList<Volunteer>) : RecyclerV
             binding.volunteerName.text = volunteer.volunteerName +" "+ volunteer.volunteerSurname
             Glide.with(binding.root)
                 .load(volunteer.volunteerImageURL)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.volunteerImage)
         }
     }

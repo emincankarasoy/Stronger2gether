@@ -12,6 +12,7 @@ import com.emincankarasoy.stronger2gether.R
 import com.emincankarasoy.stronger2gether.databinding.ActivityApplicationBinding
 import com.emincankarasoy.stronger2gether.module.checkExitRequest
 import android.graphics.drawable.Drawable
+import com.google.android.material.snackbar.Snackbar
 
 class ApplicationActivity : AppCompatActivity() {
     private lateinit var binding : ActivityApplicationBinding
@@ -35,7 +36,10 @@ class ApplicationActivity : AppCompatActivity() {
 
     private fun setOnClickListener(){
         binding.donateFab.setOnClickListener{
-            startActivity(Intent(this,CampaignDetailActivity::class.java))
+            Snackbar.make(binding.root,"You can't use this feature in the demo mode!",Snackbar.LENGTH_INDEFINITE)
+                .setAction("Exit"){
+
+                }.show()
         }
     }
 

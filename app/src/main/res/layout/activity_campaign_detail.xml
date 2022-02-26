@@ -28,29 +28,41 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/color_darkness"
+        tools:ignore="ContentDescription" />
+
+
     <TextView
         android:id="@+id/campaignPatientname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="Martin"
-        android:textColor="@color/colorOnDark"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@id/campaignPatientSurname"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/campaignPatientSurname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:text="Skywalker"
         android:textColor="@color/colorOnDark"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@id/donateBar"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/campaignDescription"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/campaignDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="@color/colorOnDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/donateBar"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:singleLine="true"/>
+
 
     <LinearLayout
         android:id="@+id/donateBar"
@@ -97,54 +109,42 @@
     </LinearLayout>
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/campaignDetailTotalDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2500_2600"
         android:layout_marginHorizontal="10dp"
-        app:cardBackgroundColor="@color/colorOnDark"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/donateBar"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorComponentDark"/>
+
+    <TextView
+        android:id="@+id/campaignDetailDonation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/donation"
+        android:layout_marginHorizontal="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/donateBar">
+        app:layout_constraintTop_toBottomOf="@id/donateBar"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorComponentDark"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp"
-            android:isScrollContainer="true">
-
-            <TextView
-                android:id="@+id/campaignDescriptionTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/description"
-                android:textColor="@color/colorComponentDark"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/campaignDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/lorem_ipsum"
-                android:textColor="@color/colorComponentDark"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/campaignDescriptionTwo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/lorem_ipsum"
-                android:textColor="@color/colorComponentDark"
-                android:textSize="18sp" />
-        </LinearLayout>
+    <ProgressBar
+        android:id="@+id/campaignDetailProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campaignDetailTotalDonate"
+        android:progressTint="@color/colorPrimary"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 
 
-    </com.google.android.material.card.MaterialCardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

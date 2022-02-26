@@ -1,6 +1,6 @@
 package com.emincankarasoy.stronger2gether.data.model
 
-import java.util.*
+import java.io.Serializable
 
 data class Campaign(
     var campaignName:String,
@@ -8,4 +8,4 @@ data class Campaign(
     val campaignImageURL:String,
     var campaignTotalDonation:Int,
     var campaignTargetDonation:Int,
-)
+):Serializable

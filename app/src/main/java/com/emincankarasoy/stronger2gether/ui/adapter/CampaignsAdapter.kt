@@ -1,12 +1,15 @@
 package com.emincankarasoy.stronger2gether.ui.adapter
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.emincankarasoy.stronger2gether.data.model.Campaign
 import com.emincankarasoy.stronger2gether.databinding.RecyclerCampaignBinding
+import com.emincankarasoy.stronger2gether.ui.view.CampaignDetailActivity
 
 class CampaignsAdapter (private var itemList : ArrayList<Campaign>)  : RecyclerView.Adapter<CampaignsAdapter.ViewHolder>() {
 
@@ -28,6 +31,12 @@ class CampaignsAdapter (private var itemList : ArrayList<Campaign>)  : RecyclerV
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(itemList[position])
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, CampaignDetailActivity::class.java).apply {
+                putExtra("campaign",itemList[position])
+            }
+            it.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = itemList.size
@@ -40,6 +49,7 @@ class CampaignsAdapter (private var itemList : ArrayList<Campaign>)  : RecyclerV
             binding.totalDonateText.text = "$"+campaign.campaignTotalDonation.toString() + " / $" + campaign.campaignTargetDonation.toString()
             Glide.with(binding.root)
                 .load(campaign.campaignImageURL)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.campaignBackground)
             binding.campaignProgressBar.max = campaign.campaignTargetDonation
             binding.campaignProgressBar.progress = campaign.campaignTotalDonation

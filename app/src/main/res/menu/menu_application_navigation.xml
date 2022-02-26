@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_round_home"
@@ -13,6 +11,11 @@
         android:title="@string/menu_campaign"
         android:enabled="false" />
 
+    <item android:id="@+id/favouriteFragment"
+        android:icon="@drawable/ic_heart"
+        android:title="@string/favourites"
+        android:enabled="false"/>
+
     <item android:id="@+id/notificationFragment"
         android:icon="@drawable/ic_round_notification"
         android:title="@string/menu_notification"
@@ -22,5 +25,4 @@
         android:id="@+id/accountFragment"
         android:icon="@drawable/ic_round_person"
         android:title="@string/menu_person"/>
-
 </menu>

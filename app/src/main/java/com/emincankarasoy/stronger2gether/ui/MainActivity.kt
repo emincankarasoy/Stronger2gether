@@ -23,14 +23,13 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         lifecycleScope.launch(Dispatchers.Default) {
-            delay(5000L)
+            delay(4000L)
             goToNextScreen()
         }
     }
 
     private fun goToNextScreen(){
         startActivity(Intent(this,ApplicationActivity::class.java))
-        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         finish()
     }
 }

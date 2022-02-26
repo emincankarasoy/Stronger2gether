@@ -12,6 +12,7 @@ import com.emincankarasoy.stronger2gether.ui.adapter.CompletedCampaignsAdapter
 import com.emincankarasoy.stronger2gether.ui.adapter.VolunteersAdapter
 import com.emincankarasoy.stronger2gether.ui.viewmodel.CampaignViewModel
 import com.emincankarasoy.stronger2gether.ui.viewmodel.VolunteerViewModel
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 
 class HomeFragment : Fragment() {
 
@@ -56,9 +57,9 @@ class HomeFragment : Fragment() {
         binding.volunteerRecyclerView.adapter = volunteersAdapter
 
         startObservingLiveDatas()
-        binding.completedCampaignRecycler.layoutManager?.apply {
-            scrollToPosition(2)
-        }
+
+        val snapHelper = GravitySnapHelper(Gravity.CENTER)
+        snapHelper.attachToRecyclerView(binding.completedCampaignRecycler)
     }
 
     private fun startObservingLiveDatas(){
@@ -73,7 +74,6 @@ class HomeFragment : Fragment() {
         volunteerViewModel.volunteerList.observe(viewLifecycleOwner){
             volunteersAdapter.changeVolunteerListValues(it)
         }
-
 
     }
 

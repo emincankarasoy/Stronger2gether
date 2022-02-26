@@ -50,6 +50,7 @@ dependencies {
 
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.rubensousa:gravitysnaphelper:2.2.2'
 
 
     testImplementation 'junit:junit:4.13.2'

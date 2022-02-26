@@ -35,4 +35,9 @@
     <string name="description">Description</string>
     <string name="favorite">Favorite</string>
     <string name="report">Report</string>
+    <string name="_2500_2600">$2500 / $2600</string>
+    <string name="donation">Donation</string>
+    <string name="favourites">Favourites</string>
+    <string name="achievements">Achievements</string>
+    <string name="best_donator_in_the_world">Best Donator in the World!</string>
 </resources>
