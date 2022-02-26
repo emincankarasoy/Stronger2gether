@@ -16,4 +16,10 @@
     <string name="application_donate">Donate</string>
     <string name="menu_campaign">Campaigns</string>
     <string name="menu_notification">Notification</string>
+    <string name="demo_user">Olivia Gonzales</string>
+    <string name="demo_user_acc">Lovely Helpful Person</string>
+    <string name="total_donate">Total Donate :</string>
+    <string name="total_donate_value">$9.023.451</string>
+    <string name="registered_user">Registered User :</string>
+    <string name="registered_user_value">11.357</string>
 </resources>

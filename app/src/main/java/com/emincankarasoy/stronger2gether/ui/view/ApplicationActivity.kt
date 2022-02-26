@@ -23,8 +23,6 @@ class ApplicationActivity : AppCompatActivity() {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-        binding.applicationToolbar.setNavigationIcon(R.drawable.ic_round_menu)
-        binding.applicationToolbar.title = "Strong2gether"
         binding.applicationToolbar.inflateMenu(R.menu.menu_home_toolbar)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.applicationNavHostFragment) as NavHostFragment

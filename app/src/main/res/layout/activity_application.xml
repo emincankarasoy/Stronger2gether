@@ -11,12 +11,49 @@
         android:id="@+id/applicationToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/colorOnDark" />
+        app:titleTextColor="@color/colorOnDark">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="start"
+            android:src="@drawable/image_volunteer"
+            app:civ_border_color="@color/colorOnDark"
+            app:civ_border_width="1dp" />
+
+        <LinearLayout
+            android:paddingStart="15dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/demo_user"
+                android:textStyle="bold"
+                android:textColor="@color/colorOnDark"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:maxWidth="200dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/demo_user_acc"
+                android:textColor="#66011B30"
+                android:maxWidth="200dp"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/applicationNavHostFragment"
@@ -35,11 +72,9 @@
         app:icon="@drawable/ic_heart"
         android:text="@string/application_donate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="5dp"
-        tools:ignore="ContentDescription"
-        app:layout_anchor="@id/applicationBottomNavView"/>
+        app:layout_constraintBottom_toBottomOf="@id/applicationBottomNavView"
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/applicationBottomNavView"
